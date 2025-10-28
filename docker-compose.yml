@@ -1,0 +1,29 @@
+services:
+  web:
+    build: .
+    container_name: php-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: child_adoption_portal
+
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: child_adoption_portal
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

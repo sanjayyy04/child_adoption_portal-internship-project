@@ -19,7 +19,7 @@ if (!isset($_SESSION['admin_loggedin'])) {
 
   <div class="dashboard-sidebar">
     <h2>Adoption Portal</h2><hr>
-    <a href="#" onclick="loadPage('pages/home.php')">🏠 Home</a>
+    <a href="#" onclick="loadPage('pages/home.php')">🏠 Dashboard</a>
     <a href="#" onclick="loadPage('pages/add_child.php')">➕ Add Child</a>
     <a href="#" onclick="loadPage('pages/view_children.php')">👶 View Children</a>
     <a href="#" onclick="loadPage('pages/appointments.php')">📅 Appointments</a>

@@ -16,7 +16,7 @@
     <a href="index.php">Home</a>
     <a href="register.php">Register</a>
     <a href="login.php">User Login</a>
-    <a href="login.php">Admin Login</a>
+    <a href="login.php" target="_blank">Admin Login</a>
     <button id="modeToggle">🌙</button>
   </nav>
 </header>
